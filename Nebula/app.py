@@ -1,6 +1,8 @@
 import json
 import time
 
+data = [] #defined an empty list to store elements
+
 unix_timestamp = int(time.time())
 
 
@@ -14,15 +16,16 @@ def analyze_list_elements(input_list):
 
     for element in input_list:
         
-        if element % 2 == 0:
+        if element % 2 == 0: #Condition to check if number is an even number or odd number
             print(f"{element} is an even number.")
         else:
             print(f"{element} is an odd number.")
 
-        data.append(element)
+        data.append(element) #corrected the indentation to be in the condition
+        print(data)
 
-    sum_of_elements = sum(input_list)
-    data.remove(element)
+    sum_of_elements = sum(input_list) #Corrected the indentation error properly to be inside the analyze_list_elements 
+    #removed the data.remove because it is unnecssary
     print(f"The sum of all elements in the list is: {sum_of_elements}")
 
 
@@ -33,9 +36,9 @@ def main():
     my_list = process_input(user_input_list)
 
     
-    total = analyze_list_elements(my_list)
+    analyze_list_elements(my_list)
 
-    if total == sum(data):
+    if sum(my_list) == sum(data):
 
         group_name = input("Enter the name of your group: ")
 
