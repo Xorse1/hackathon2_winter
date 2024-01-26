@@ -1,7 +1,7 @@
 import json
 import time
 
-data = [] #defined an empty list to store elements
+data = [] #defined an empty list "data" as was indicated in the original code to store elements
 
 unix_timestamp = int(time.time())
 
