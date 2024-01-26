@@ -1,16 +1,25 @@
-import json
-import time
+"""Hackathon 2024
+"""
 
+import json   # import the json module
+import time   # import the time module
+
+# get the the current timestamp
 unix_timestamp = int(time.time())
 
-
+data = []   # empty list for data
 
 def process_input(u):
+    """Program prepares the numbers
+    """
     return [int(x.strip()) for x in u]
 
 
 
 def analyze_list_elements(input_list):
+    """Funtion add numbers to the data list
+       and return the sum of the elements of the list
+    """
 
     for element in input_list:
         
@@ -22,13 +31,16 @@ def analyze_list_elements(input_list):
         data.append(element)
 
     sum_of_elements = sum(input_list)
-    data.remove(element)
+    # data.remove(element)   -> avoid removing last element
+    return sum_of_elements  # return the value of sum element
     print(f"The sum of all elements in the list is: {sum_of_elements}")
 
 
 
 
 def main():
+    """This is the driver function
+    """
     user_input_list = input("Enter a list of numbers separated by commas: ").split(',')
     my_list = process_input(user_input_list)
 
