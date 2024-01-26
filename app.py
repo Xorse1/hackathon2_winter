@@ -4,11 +4,8 @@ import time
 unix_timestamp = int(time.time())
 #We define the list data as a global variable
 data=[]
-
 def process_input(u):
     return [int(x.strip()) for x in u]
-
-
 
 def analyze_list_elements(input_list):
     
@@ -29,6 +26,7 @@ def analyze_list_elements(input_list):
     print(f"The sum of all elements in the list is: {sum_of_elements}")
     #return the sum of elemnts added
     return sum_of_elements
+
 #Introduced a check if number Function that returns True or False
 def check_if_number(input_list_by_user):
     for input in input_list_by_user:
@@ -36,8 +34,6 @@ def check_if_number(input_list_by_user):
             
             return False        
     return True
-        
-
 
 def main():
     #Loop an error handling to validate input
