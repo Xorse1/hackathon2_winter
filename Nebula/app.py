@@ -1,5 +1,5 @@
-import json
-import time
+import json #import the json module
+import time #imported the time module
 
 data = [] #defined an empty list "data" as was indicated in the original code to store elements
 
@@ -8,11 +8,11 @@ unix_timestamp = int(time.time())
 
 
 def process_input(u):
-    return [int(x.strip()) for x in u]
+    return [int(x.strip()) for x in u] #takes a list of strings as inputs and converts them to integers
 
 
 
-def analyze_list_elements(input_list):
+def analyze_list_elements(input_list): #Takes a list of integers as input and iterates over each element in the list
 
     for element in input_list:
         
@@ -32,13 +32,13 @@ def analyze_list_elements(input_list):
 
 
 def main():
-    user_input_list = input("Enter a list of numbers separated by commas: ").split(',')
+    user_input_list = input("Enter a list of numbers separated by commas: ").split(',') #prompts user to enter a list of numbers
     my_list = process_input(user_input_list)
 
     
-    analyze_list_elements(my_list)
+    analyze_list_elements(my_list) #call the analyze function to analyze the elements in "my_list"
 
-    if sum(my_list) == sum(data):
+    if sum(my_list) == sum(data): #check if sum of original list is equal to sum of processed elements in "data"
 
         group_name = input("Enter the name of your group: ")
 
